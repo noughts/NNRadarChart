@@ -21,6 +21,12 @@
     NSLog(@"%@", NSStringFromCGRect(_chart.bounds));
 }
 
+-(IBAction)onUpdateButtonTap:(id)sender{
+    _chart.dataSeries = @[@[@(61),@(24),@(34),@(104),@(10)]];
+    _chart.attributes = @[@"attack",@"defense",@"speed",@"HP",@"MP"];
+    [_chart setNeedsDisplay];
+}
+
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
