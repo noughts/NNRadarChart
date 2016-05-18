@@ -22,8 +22,7 @@
 }
 
 -(IBAction)onUpdateButtonTap:(id)sender{
-    _chart.dataSeries = @[@[@(61),@(24),@(34),@(104),@(10)]];
-    _chart.attributes = @[@"attack",@"defense",@"speed",@"HP",@"MP"];
+    _chart.dataSeries = @[@[@(0),@(0),@(0),@(5),@(0)]];
     [_chart setNeedsDisplay];
 }
 
@@ -31,7 +30,10 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     NSLog(@"%@", NSStringFromCGRect(_chart.bounds));
-    _chart.dataSeries = @[@[@(51),@(44),@(94),@(84),@(90)]];
+    _chart.maxValue = 5;
+    _chart.minValue = 0;
+    _chart.dataSeries = @[@[@(0),@(5),@(4),@(3),@(5)]];
+    _chart.steps = 5;
     _chart.attributes = @[@"attack",@"defense",@"speed",@"HP",@"MP"];
     [_chart setNeedsDisplay];
 }
