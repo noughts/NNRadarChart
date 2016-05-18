@@ -11,7 +11,6 @@
 
 @implementation NNViewController{
     __weak IBOutlet NNRadarChart* _chart;
-//    __weak IBOutlet UIView* hoge;
 }
 
 - (void)viewDidLoad{
@@ -29,7 +28,6 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-//    NSLog(@"%@", NSStringFromCGRect(_chart.bounds));
     
     NSArray *a1 = @[@(0),@(5),@(4),@(3),@(5)];
     NSArray *a2 = @[@(3),@(2),@(4),@(0),@(1)];
@@ -48,10 +46,6 @@
     [_chart setColors:@[[UIColor redColor],[UIColor blackColor]]];
     
     [_chart setNeedsDisplay];
-}
-
--(void)viewDidLayoutSubviews{
-        NSLog(@"%@", NSStringFromCGRect(_chart.bounds));
 }
 
 @end
