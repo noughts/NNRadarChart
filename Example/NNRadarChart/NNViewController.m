@@ -30,11 +30,22 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     NSLog(@"%@", NSStringFromCGRect(_chart.bounds));
+    
+    NSArray *a1 = @[@(0),@(5),@(4),@(3),@(5)];
+    NSArray *a2 = @[@(3),@(2),@(4),@(0),@(1)];
+    _chart.dataSeries = @[a1, a2];
+    
     _chart.maxValue = 5;
     _chart.minValue = 0;
-    _chart.dataSeries = @[@[@(0),@(5),@(4),@(3),@(5)]];
     _chart.steps = 5;
+    _chart.fillArea = YES;
+    _chart.colorOpacity = 0.5f;
     _chart.attributes = @[@"attack",@"defense",@"speed",@"HP",@"MP"];
+    
+    _chart.showLegend = YES;
+    [_chart setTitles:@[@"1回目", @"2回目"]];
+    [_chart setColors:@[[UIColor redColor],[UIColor blackColor]]];
+    
     [_chart setNeedsDisplay];
 }
 
