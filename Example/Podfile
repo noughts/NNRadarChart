@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NNRadarChart_Example' do
+  pod 'NNRadarChart', :path => '../'
+
+  target 'NNRadarChart_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
