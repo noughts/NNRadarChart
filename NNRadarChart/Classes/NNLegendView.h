@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JYLegendView : UIView
+@interface NNLegendView : UIView
 
 @property (nonatomic, copy) NSArray *titles;
 @property (nonatomic, strong) NSMutableArray *colors;

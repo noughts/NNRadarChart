@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JYRadarChart : UIView
+@interface NNRadarChart : UIView
 
 @property (nonatomic, assign) CGFloat r;
 @property (nonatomic, assign) CGFloat maxValue;

@@ -7,23 +7,31 @@
 //
 
 #import "NNViewController.h"
+#import <NNRadarChart.h>
 
-@interface NNViewController ()
-
-@end
-
-@implementation NNViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+@implementation NNViewController{
+    __weak IBOutlet NNRadarChart* _chart;
+//    __weak IBOutlet UIView* hoge;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+
+    NSLog(@"%@", NSStringFromCGRect(_chart.bounds));
+}
+
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"%@", NSStringFromCGRect(_chart.bounds));
+    _chart.dataSeries = @[@[@(51),@(44),@(94),@(84),@(90)]];
+    _chart.attributes = @[@"attack",@"defense",@"speed",@"HP",@"MP"];
+    [_chart setNeedsDisplay];
+}
+
+-(void)viewDidLayoutSubviews{
+        NSLog(@"%@", NSStringFromCGRect(_chart.bounds));
 }
 
 @end

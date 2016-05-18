@@ -6,24 +6,24 @@
 //  Copyright (c) 2013年 wcode. All rights reserved.
 //
 
-#import "JYRadarChart.h"
-#import "JYLegendView.h"
+#import "NNRadarChart.h"
+#import "NNLegendView.h"
 
 #define PADDING 13
 #define LEGEND_PADDING 3
-#define ATTRIBUTE_TEXT_SIZE 10
+#define ATTRIBUTE_TEXT_SIZE 14
 #define COLOR_HUE_STEP 5
 #define MAX_NUM_OF_COLOR 17
 
-@interface JYRadarChart ()
+@interface NNRadarChart ()
 
 @property (nonatomic, assign) NSUInteger numOfV;
-@property (nonatomic, strong) JYLegendView *legendView;
+@property (nonatomic, strong) NNLegendView *legendView;
 @property (nonatomic, strong) UIFont *scaleFont;
 
 @end
 
-@implementation JYRadarChart
+@implementation NNRadarChart
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
@@ -56,7 +56,7 @@
     _backgroundLineColorRadial = [UIColor darkGrayColor];
     _backgroundFillColor = [UIColor whiteColor];
 
-    _legendView = [[JYLegendView alloc] init];
+    _legendView = [[NNLegendView alloc] init];
     _legendView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
     _legendView.backgroundColor = [UIColor clearColor];
     _legendView.colors = [NSMutableArray array];
@@ -75,7 +75,7 @@
 	}
 	else {
 		for (UIView *subView in self.subviews) {
-			if ([subView isKindOfClass:[JYLegendView class]]) {
+			if ([subView isKindOfClass:[NNLegendView class]]) {
 				[subView removeFromSuperview];
 			}
 		}
@@ -95,6 +95,7 @@
 
 - (void)setNeedsDisplay {
 	[super setNeedsDisplay];
+    _centerPoint = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
 	[self.legendView sizeToFit];
 	[self.legendView setNeedsDisplay];
 }

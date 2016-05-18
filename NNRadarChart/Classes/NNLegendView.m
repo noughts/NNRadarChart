@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 wcode. All rights reserved.
 //
 
-#import "JYLegendView.h"
+#import "NNLegendView.h"
 
 #define COLOR_PADDING 15
 #define PADDING 3
@@ -14,13 +14,13 @@
 #define LEGEND_ROUND_RADIUS 7
 #define CIRCLE_DIAMETER 6
 
-@interface JYLegendView ()
+@interface NNLegendView ()
 
 @property (nonatomic, strong) UIFont *legendFont;
 
 @end
 
-@implementation JYLegendView
+@implementation NNLegendView
 
 void CGContextAddRoundedRect(CGContextRef c, CGRect rect, CGFloat radius) {
 	if (2 * radius > rect.size.height) radius = rect.size.height / 2.0;

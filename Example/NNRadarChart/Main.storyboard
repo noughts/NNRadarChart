@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="whP-gf-Uak">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,14 +14,31 @@
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKG-Lp-ijw" customClass="NNRadarChart">
+                                <rect key="frame" x="20" y="184" width="280" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ucJ-Lw-oIL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EKG-Lp-ijw" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="RDp-G5-Vom"/>
+                            <constraint firstAttribute="trailing" secondItem="EKG-Lp-ijw" secondAttribute="trailing" constant="20" id="aur-p3-cDf"/>
+                            <constraint firstItem="EKG-Lp-ijw" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="20" id="gPj-dw-Veu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="_chart" destination="EKG-Lp-ijw" id="PZc-2J-GL0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="162.66666666666666" y="409.90666666666664"/>
         </scene>
     </scenes>
 </document>
