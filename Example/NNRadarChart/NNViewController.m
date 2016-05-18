@@ -35,12 +35,13 @@
     NSArray *a2 = @[@(3),@(2),@(4),@(0),@(1)];
     _chart.dataSeries = @[a1, a2];
     
+    _chart.backgroundLineColorRadial = [UIColor lightGrayColor];
     _chart.maxValue = 5;
     _chart.minValue = 0;
     _chart.steps = 5;
     _chart.fillArea = YES;
     _chart.colorOpacity = 0.5f;
-    _chart.attributes = @[@"attack",@"defense",@"speed",@"HP",@"MP"];
+    _chart.attributes = @[@"朝の気分",@"朝食の摂取",@"朝の活動性",@"昼寝の時間と回数",@"寝付き"];
     
     _chart.showLegend = YES;
     [_chart setTitles:@[@"1回目", @"2回目"]];

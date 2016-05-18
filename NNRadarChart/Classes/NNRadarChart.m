@@ -9,9 +9,9 @@
 #import "NNRadarChart.h"
 #import "NNLegendView.h"
 
-#define PADDING 13
-#define LEGEND_PADDING 3
-#define ATTRIBUTE_TEXT_SIZE 14
+#define PADDING 30
+#define LEGEND_PADDING 10
+#define ATTRIBUTE_TEXT_SIZE 12
 #define COLOR_HUE_STEP 5
 #define MAX_NUM_OF_COLOR 17
 
