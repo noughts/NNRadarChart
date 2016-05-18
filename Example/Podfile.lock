@@ -1,0 +1,16 @@
+PODS:
+  - NNRadarChart (0.1.0)
+
+DEPENDENCIES:
+  - NNRadarChart (from `../`)
+
+EXTERNAL SOURCES:
+  NNRadarChart:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NNRadarChart: d00e1bbd38685b1d58489b7e061a2de3b083141f
+
+PODFILE CHECKSUM: 9a951f3040f632b3078f0d21198fab2dc9841c5c
+
+COCOAPODS: 1.0.0
