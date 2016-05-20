@@ -118,7 +118,8 @@
 - (void)layoutSubviews {
 	[self.legendView sizeToFit];
 	CGRect r = self.legendView.frame;
-	r.origin.x = self.frame.size.width - self.legendView.frame.size.width - LEGEND_PADDING;
+//	r.origin.x = self.frame.size.width - self.legendView.frame.size.width - LEGEND_PADDING;
+	r.origin.x = LEGEND_PADDING;
 	r.origin.y = LEGEND_PADDING;
 	self.legendView.frame = r;
 	[self bringSubviewToFront:self.legendView];
